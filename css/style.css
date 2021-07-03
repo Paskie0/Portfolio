@@ -4,9 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/background.svg");
+  background-attachment: fixed;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 header {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  width: 100%;
 }
 
 .name {
@@ -49,4 +67,24 @@ header {
 
 .change .bar2 {
   transform: rotate(360deg);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
 }
