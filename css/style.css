@@ -4,12 +4,49 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
+header {
   display: flex;
+  justify-content: flex-end;
 }
 
-div {
-  margin: auto;
+.name {
+  margin-right: auto;
   font-family: "Roboto Mono", monospace;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.logo-wrap {
+  margin-top: auto;
+}
+
+.github,
+.twitter {
+  width: 25px;
+  height: 25px;
+}
+
+.menu-button {
+  margin-top: auto;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2 {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: rotate(360deg);
+}
+
+.change .bar2 {
+  transform: rotate(360deg);
 }
