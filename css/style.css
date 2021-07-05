@@ -24,11 +24,10 @@ body {
 header {
   display: flex;
   position: fixed;
-  justify-content: flex-end;
   align-items: center;
   top: 0;
-  width: 95%;
-  height: 10%;
+  width: 90%;
+  height: 5rem;
   left: 50%;
   transform: translate(-50%);
 }
