@@ -1,0 +1,40 @@
+body {
+    background-image: url("img/spikes.png");
+}
+
+h2 {
+    text-align: center;
+    color: coral;
+    font-size: 3vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+div {
+    text-align: center;
+    margin: -8px;
+    height: 1080px;
+}
+
+div p {
+    width: 35%;
+    color: coral;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    display: inline-block;
+    margin: 0.5vw;
+}
+
+.SB::-webkit-scrollbar {
+    display: none;
+}
+
+.SB1 {
+    -ms-overflow-style: none;
+}
+
+
+
+
+
+
+

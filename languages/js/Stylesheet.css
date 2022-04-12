@@ -1,0 +1,42 @@
+body {
+    background-image: url("img/spikes.png");
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    color: coral;
+    font-size: 4em;
+    font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    color: coral;
+    font-size: 3em;
+    font-family: 'Raleway', sans-serif;
+}
+
+h3 {
+    text-align: center;
+    color: darkslategrey;
+    font-size: 2em;
+    font-family: 'Raleway', sans-serif;
+    transition: transform 0.5s;
+}
+
+h3:hover {
+    transform: scale(0.95);
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+nav{
+    background-color: black;
+    padding: 10px;
+}
+nav a {
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+    border-right: 2px solid white;
+    padding-right:5px ;
+}
+body {
+    font-family: "Arial","sans-serif";
+}
+div.wrapper {
+    width: 1200px;
+    margin:auto;
+}
+article {
+    display:inline-block;
+    width:50%;
+    vertical-align:top;
+    margin-top: 20px;
+}
+table {
+    float: right;
+    border:1px solid black;
+    border-collapse: collapse;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+td{
+    padding: 20px ;
+    border:1px solid black;
+}
+td.elek {
+    background-color: greenyellow;
+}
+td.Aard {
+    background-color: deepskyblue;
+}
+a.back{
+    margin-top: 200px;
+}

@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #282828;
+}
+
+h1 {
+    display: inline-block;
+    margin-left: 41%;
+    color: white;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3em;
+}
+
+.game {
+    width: 960px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards {
+    background: darkslategrey;
+    width: calc(16.667% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    transform-style: preserve-3d;
+    box-shadow: -5px 5px 5px 0 rgba(0,0,0,0.75);
+    transition: 0.5s;
+}
+
+.cards:active {
+    transform: scale(0.95);
+    transition: transform 0.5s;
+}
+
+img {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.cards.flip {
+    transform: rotateY(180deg);
+    transition: 0.5s;
+}
+
+.front {
+    transform: rotateY(180deg);
+}

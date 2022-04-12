@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #121212;
+}
+
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#welcomeTitle {
+  color: #f8f0e3;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+#welcomeName {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.languageCard {
+  text-align: center;
+  line-height: 200px;
+  margin: 0 8px;
+  width: 100px;
+  height: 200px;
+  background-color: #f8f0e3;
+  border-radius: 10px;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  transition: all ease 0.2s;
+  user-select: none;
+  cursor: pointer;
+}
+
+.languageCard:hover {
+  transform: scale(0.95);
+}
+
+#bottom {
+  display: flex;
+}

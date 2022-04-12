@@ -1,0 +1,25 @@
+/*CSS voor beide html bestanden*/
+body {
+    background-color: blanchedalmond;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+a {
+    font-family: sans-serif;
+}
+
+td {
+    font-family: sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+/*CSS voor index2.html*/
+h2 {
+    font-family: sans-serif;
+}
+

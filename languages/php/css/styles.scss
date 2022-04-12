@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #c9ccd0;
+  background-color: #121212;
+}
+
+h1,
+#addStudentForm,
+#addStudentFormContainer {
+  text-align: center;
+}
+
+#buttonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  transition: all ease 0.2s;
+  margin: 5px;
+  padding: 7px 15px;
+  border: 1px solid rgba(31, 31, 31, 0.15);
+  border-radius: 5px;
+  box-shadow: rgb(0, 0, 0, 0.75) 0px 20px 30px -10px;
+  font-weight: 600;
+  color: whitesmoke;
+  background-color: #238636;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: rgb(0, 0, 0, 0.25) 0px 20px 30px -10px;
+  transform: translateY(-5px);
+}
+
+#editButton {
+  width: 5em;
+  color: #c9ccd0;
+  background-color: #21262d;
+}
+
+#deleteButton {
+  width: 5em;
+  background-color: #ef5144;
+  color: #21262d;
+}
+
+table {
+  background-color: #0d1117;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  border-spacing: 0;
+  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 25px 25px 25px 25px;
+  border-bottom: 1px solid gray;
+}
+
+#noBottomBorder:last-of-type td {
+  border-bottom: none;
+}

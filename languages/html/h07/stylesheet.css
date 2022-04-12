@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+div#wrapper {
+    background-color: rgb(250, 241, 234);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+header {
+    background-color: rgb(192, 240, 223);
+    text-align: center;
+}
+
+img#logo {
+    width: 320px;
+    box-shadow: none;
+}
+
+img {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    background-color: rgb(128,128,128);
+    padding: 10px;
+    padding-left: 20px;
+    border-top: 1px solid white;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+@media all and (min-width: 550px) {
+    ul {
+        background-color: rgb(128,128,128);
+        border-top: 1px solid white;
+    }
+    li {
+        display: inline-block;
+        border: none;
+    }
+
+}
+
+h3 {
+    color: rgb(220,106,94);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+section, footer {
+    padding: 20px;
+}
+
+@media all and (min-width: 550px) {
+
+    section#nieuws {
+        width: 40%;
+        float: left;
+    }
+    section#instrumenten {
+        width: 60%;
+        float: right;
+    }
+}
+
+footer {
+    background-color: rgb(128,128,128);
+    color: white;
+    clear: both;
+}
+
+footer h3 {
+    color: white;
+}
+
+@media all and (min-width: 920px) {
+
+    section#nieuws {
+        width: 30%;
+        float: left;
+    }
+    section#instrumenten {
+        width: 70%;
+        float: right;
+    }
+    article {
+        display: inline-block;
+        width: 47%;
+        margin-right: 20px;
+    }
+    article:nth-child(even) {
+        margin-right: 0px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    div#wrapper {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+iframe {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}

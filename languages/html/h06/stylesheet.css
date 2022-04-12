@@ -1,0 +1,71 @@
+form {
+    display: inline-block;
+}
+
+form ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+form ul li {
+    padding: 10px;
+}
+
+form ul li input {
+    position: absolute;
+    left: 150px;
+}
+
+textarea {
+    left: 150px;
+    position: absolute;
+    resize: none;
+}
+
+.input {
+    margin-left: 5px;
+}
+
+.input1 {
+    margin-left: 90px;
+}
+
+div {
+    left: 320px;
+    bottom: 783px;
+    position: absolute;
+    float: left;
+}
+
+.divspan1 {
+    position: absolute;
+    left: 170px;
+    bottom: 83px;
+}
+
+.divspan2 {
+    position: absolute;
+    left: 170px;
+    bottom: 63px;
+}
+
+.divspan3 {
+    position: absolute;
+    left: 170px;
+    bottom: 43px;
+}
+
+.div1 {
+    position: absolute;
+    bottom: 82px;
+}
+
+.div2 {
+    position: absolute;
+    bottom: 62px;
+}
+
+.div3 {
+    position: absolute;
+    bottom: 42px;
+}

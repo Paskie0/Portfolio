@@ -1,0 +1,20 @@
+/*CSS voor beide html bestanden*/
+body {
+    background-color: blanchedalmond;
+}
+
+a {
+    font-family: sans-serif;
+}
+/*CSS voor websitemaken.html*/
+h1 {
+    font-family: sans-serif;
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: sans-serif;
+}
