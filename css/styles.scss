@@ -1,59 +1,144 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("http://fonts.cdnfonts.com/css/sf-mono");
 
-* {
-  font-family: "Roboto", sans-serif;
+@mixin flexAlign() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-body {
+@mixin textDecor($color, $opacity) {
+  text-decoration: underline rgba($color, $opacity) 0.1rem;
+}
+
+$htmlColor: rgba(221, 77, 39, 1);
+$phpColor: rgba(119, 123, 179, 1);
+$javaColor: rgba(248, 152, 28, 1);
+$otherColor: rgba(195, 98, 145, 1);
+$githubColor: rgba(100, 100, 100, 1);
+$twitterColor: rgba(29, 161, 242, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} // css reset
+
+:root {
+  width: fit-content;
+  margin: auto;
   background-color: #121212;
 }
 
-#top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#welcomeTitle {
-  color: #f8f0e3;
-  font-weight: 100;
-  font-size: 2rem;
-}
-
-#welcomeName {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-#middle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.languageCard {
-  text-align: center;
-  line-height: 200px;
-  margin: 0 8px;
-  width: 100px;
-  height: 200px;
-  background-color: #f8f0e3;
-  border-radius: 10px;
-  box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-  transition: all ease 0.2s;
+#intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(2, 2);
+  font-family: "SF Mono", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  border-right: 0.1em solid white;
+  white-space: nowrap;
   user-select: none;
-  cursor: pointer;
+  animation: blink-caret 0.7s step-end infinite normal;
+
+  @keyframes blink-caret {
+    0% {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: white;
+    }
+  }
+
+  &.top {
+    top: 0;
+    transform: translateX(-50%);
+    animation-play-state: paused;
+    opacity: 0;
+  }
+
+  &.hide {
+    display: none;
+  }
 }
 
-.languageCard:hover {
-  transform: scale(0.95);
+#wrapContent {
+  @include flexAlign;
+  padding: 1.5rem;
+  opacity: 0;
+
+  #top,
+  #middle,
+  #bottom {
+    @include flexAlign;
+  }
 }
 
-#bottom {
-  display: flex;
+h2 {
+  color: white;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1.28rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: default;
+
+  span {
+    font-weight: 600;
+    transition: text-decoration 0.3s ease;
+    cursor: pointer;
+  }
+
+  #lang1 {
+    color: $htmlColor;
+    @include textDecor($htmlColor, 0);
+
+    &:hover {
+      @include textDecor($htmlColor, 1);
+    }
+  }
+
+  #lang2 {
+    color: $phpColor;
+    @include textDecor($phpColor, 0);
+
+    &:hover {
+      @include textDecor($phpColor, 1);
+    }
+  }
+  #lang3 {
+    color: $javaColor;
+    @include textDecor($javaColor, 0);
+
+    &:hover {
+      @include textDecor($javaColor, 1);
+    }
+  }
+  #lang4 {
+    color: $otherColor;
+    @include textDecor($otherColor, 0);
+
+    &:hover {
+      @include textDecor($otherColor, 1);
+    }
+  }
+  #lang5 {
+    color: $githubColor;
+    @include textDecor($githubColor, 0);
+
+    &:hover {
+      @include textDecor($githubColor, 1);
+    }
+  }
+  #lang6 {
+    color: $twitterColor;
+    @include textDecor($twitterColor, 0);
+
+    &:hover {
+      @include textDecor($twitterColor, 1);
+    }
+  }
 }

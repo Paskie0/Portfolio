@@ -3,23 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+    <!--"maximum-scale=1.0" prevents the page from loading in zoomed on on mobile devices-->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Portfolio</title>
   </head>
   <body>
-    <section id="top">
-      <h1 id="welcomeTitle">
-        Hi, I'm<br />
-        <span id="welcomeName">Pascal De Wit...</span> <br />
-        And this is my Portfolio
-      </h1>
+    <h1 id="intro">Paskie.dev</h1>
+    <section id="wrapContent">
+      <section id="top">
+        <h2>I'm a 19 year-old developer from The Netherlands</h2>
+        <h2><span id="lang1">HTML/CSS/JS</span> · <span id="lang2">PHP</span> · <span id="lang3">Java</span> · <span id="lang4">More</span></h2>
+        <h2>Also check out my <span id="lang5">Github</span> and <span id="lang6">Twitter</span></h2>
+      </section>
+      <section id="middle"></section>
+      <section id="bottom"></section>
     </section>
-    <section id="middle">
-      <a href="languages/html/index.html"><div class="languageCard">HTML/CSS</div></a>
-      <a href="languages/js/index.html"><div class="languageCard">Javascript</div></a>
-      <a href="languages/php/index.php"><div class="languageCard">PHP</div></a>
-    </section>
-    <section id="bottom"></section>
+    <script src="js/intro.js"></script>
   </body>
 </html>

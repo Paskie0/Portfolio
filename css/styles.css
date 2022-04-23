@@ -1,79 +1,188 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("http://fonts.cdnfonts.com/css/sf-mono");
 * {
-  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-body {
+:root {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
   background-color: #121212;
 }
 
-#top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#welcomeTitle {
-  color: #f8f0e3;
-  font-weight: 100;
-  font-size: 2rem;
-}
-
-#welcomeName {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
-#middle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.languageCard {
-  text-align: center;
-  line-height: 200px;
-  margin: 0 8px;
-  width: 100px;
-  height: 200px;
-  background-color: #f8f0e3;
-  border-radius: 10px;
-  -webkit-box-shadow: black 0px 20px 30px -10px;
-          box-shadow: black 0px 20px 30px -10px;
-  -webkit-transition: all ease 0.2s;
-  transition: all ease 0.2s;
+#intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) scale(2, 2);
+          transform: translateX(-50%) translateY(-50%) scale(2, 2);
+  font-family: "SF Mono", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  border-right: 0.1em solid white;
+  white-space: nowrap;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  cursor: pointer;
+  -webkit-animation: blink-caret 0.7s step-end infinite normal;
+          animation: blink-caret 0.7s step-end infinite normal;
 }
 
-.languageCard:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+@-webkit-keyframes blink-caret {
+  0% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
 }
 
-#bottom {
+@keyframes blink-caret {
+  0% {
+    border-right-color: transparent;
+  }
+  50% {
+    border-right-color: white;
+  }
+}
+
+#intro.top {
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  opacity: 0;
+}
+
+#intro.hide {
+  display: none;
+}
+
+#wrapContent {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+}
+
+#wrapContent #top,
+#wrapContent #middle,
+#wrapContent #bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h2 {
+  color: white;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1.28rem;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: default;
+}
+
+h2 span {
+  font-weight: 600;
+  -webkit-transition: -webkit-text-decoration 0.3s ease;
+  transition: -webkit-text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+  cursor: pointer;
+}
+
+h2 #lang1 {
+  color: #dd4d27;
+  -webkit-text-decoration: underline rgba(221, 77, 39, 0) 0.1rem;
+          text-decoration: underline rgba(221, 77, 39, 0) 0.1rem;
+}
+
+h2 #lang1:hover {
+  -webkit-text-decoration: underline #dd4d27 0.1rem;
+          text-decoration: underline #dd4d27 0.1rem;
+}
+
+h2 #lang2 {
+  color: #777bb3;
+  -webkit-text-decoration: underline rgba(119, 123, 179, 0) 0.1rem;
+          text-decoration: underline rgba(119, 123, 179, 0) 0.1rem;
+}
+
+h2 #lang2:hover {
+  -webkit-text-decoration: underline #777bb3 0.1rem;
+          text-decoration: underline #777bb3 0.1rem;
+}
+
+h2 #lang3 {
+  color: #f8981c;
+  -webkit-text-decoration: underline rgba(248, 152, 28, 0) 0.1rem;
+          text-decoration: underline rgba(248, 152, 28, 0) 0.1rem;
+}
+
+h2 #lang3:hover {
+  -webkit-text-decoration: underline #f8981c 0.1rem;
+          text-decoration: underline #f8981c 0.1rem;
+}
+
+h2 #lang4 {
+  color: #c36291;
+  -webkit-text-decoration: underline rgba(195, 98, 145, 0) 0.1rem;
+          text-decoration: underline rgba(195, 98, 145, 0) 0.1rem;
+}
+
+h2 #lang4:hover {
+  -webkit-text-decoration: underline #c36291 0.1rem;
+          text-decoration: underline #c36291 0.1rem;
+}
+
+h2 #lang5 {
+  color: #646464;
+  -webkit-text-decoration: underline rgba(100, 100, 100, 0) 0.1rem;
+          text-decoration: underline rgba(100, 100, 100, 0) 0.1rem;
+}
+
+h2 #lang5:hover {
+  -webkit-text-decoration: underline #646464 0.1rem;
+          text-decoration: underline #646464 0.1rem;
+}
+
+h2 #lang6 {
+  color: #1da1f2;
+  -webkit-text-decoration: underline rgba(29, 161, 242, 0) 0.1rem;
+          text-decoration: underline rgba(29, 161, 242, 0) 0.1rem;
+}
+
+h2 #lang6:hover {
+  -webkit-text-decoration: underline #1da1f2 0.1rem;
+          text-decoration: underline #1da1f2 0.1rem;
 }
 /*# sourceMappingURL=styles.css.map */
