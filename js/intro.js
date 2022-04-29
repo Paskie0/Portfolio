@@ -67,25 +67,22 @@ let stepsArray = [
   { step: "Welcome", stepDelay: 150 },
   { step: "Welcome", stepDelay: 700 },
   { step: "Welcome", stepDelay: 700 },
-]; /* " " is an invisible unicode space (U+2002) that scales with the font size.
+]; /* " " is an invisible space (U+2002) that scales with the font size.
       If replaced by normal spaces, the array will skip over them and the "animation" will hitch. */
 
 function update() {
   let intro = document.getElementById("intro");
   let wrapContent = document.getElementById("wrapContent");
   let steps = stepsArray[step];
-  intro.style.animationIterationCount = stepsArray.length;
   intro.innerText = steps.step;
   step++;
 
   if (step < stepsArray.length) {
     setTimeout(update, steps.stepDelay / stepDivisor);
   } else {
-    wrapContent.style.transitionDuration = hideDuration + "ms";
-    wrapContent.style.transitionTimingFunction = "ease-out";
-    wrapContent.style.transitionDelay = hideDuration + "ms";
+    wrapContent.style.transition = `${hideDuration}ms ease-out ${hideDuration}ms`;
+    intro.style.transition = hideDuration + "ms";
     wrapContent.style.opacity = 1;
-    intro.style.transitionDuration = hideDuration + "ms";
     intro.classList.add("top");
     setTimeout(function hide() {
       intro.classList.add("hide");
