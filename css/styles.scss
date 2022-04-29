@@ -1,15 +1,22 @@
 @import url("http://fonts.cdnfonts.com/css/sf-pro-display");
 @import url("http://fonts.cdnfonts.com/css/sf-mono");
 
-@mixin flexAlign() {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 @mixin textDecor($color, $opacity) {
   text-decoration: underline rgba($color, $opacity) 0.1rem;
+}
+
+@mixin headerButton($grid-area, $border, $bg-color) {
+  grid-area: $grid-area;
+  padding: 0.25rem;
+  border: $border;
+  border-radius: 5px;
+  background-color: $bg-color;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  user-select: none;
 }
 
 $htmlColor: rgba(221, 77, 39, 1);
@@ -36,14 +43,14 @@ $twitterColor: rgba(29, 161, 242, 1);
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(2, 2);
-  font-family: "SF Mono", sans-serif;
+  font-family: "SF Mono", monospace;
   font-size: 1.5rem;
   color: white;
   opacity: 1;
   border-right: 0.1em solid white;
   white-space: nowrap;
   user-select: none;
-  animation: blink-caret 0.7s step-end infinite normal;
+  animation: blink-caret 0.7s step-end infinite;
 
   @keyframes blink-caret {
     0% {
@@ -57,8 +64,8 @@ $twitterColor: rgba(29, 161, 242, 1);
   &.top {
     top: 0;
     transform: translateX(-50%);
-    animation-play-state: paused;
     opacity: 0;
+    animation-play-state: paused;
   }
 
   &.hide {
@@ -67,21 +74,58 @@ $twitterColor: rgba(29, 161, 242, 1);
 }
 
 #wrapContent {
-  @include flexAlign;
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem;
   opacity: 0;
 
   #top,
   #middle,
   #bottom {
-    @include flexAlign;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content max-content max-content;
+  grid-template-areas: "logo . socials projects about menu";
+  column-gap: 0.5rem;
+
+  #headerLogo {
+    grid-area: logo;
+    align-self: center;
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    cursor: default;
+  }
+
+  #headerSocials {
+    @include headerButton(socials, none, transparent);
+  }
+
+  #headerProjects {
+    @include headerButton(projects, none, transparent);
+  }
+
+  #headerAbout {
+    @include headerButton(about, none, transparent);
+  }
+
+  #headerMenu {
+    @include headerButton(menu, 1px solid #21212d, #21212d);
   }
 }
 
 h2 {
   color: white;
   font-family: "SF Pro Display", sans-serif;
-  font-size: 1.28rem;
+  font-size: 1.25rem;
   font-weight: 500;
   white-space: nowrap;
   cursor: default;

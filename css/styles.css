@@ -21,7 +21,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%) scale(2, 2);
           transform: translateX(-50%) translateY(-50%) scale(2, 2);
-  font-family: "SF Mono", sans-serif;
+  font-family: "SF Mono", monospace;
   font-size: 1.5rem;
   color: white;
   opacity: 1;
@@ -31,8 +31,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-animation: blink-caret 0.7s step-end infinite normal;
-          animation: blink-caret 0.7s step-end infinite normal;
+  -webkit-animation: blink-caret 0.7s step-end infinite;
+          animation: blink-caret 0.7s step-end infinite;
 }
 
 @-webkit-keyframes blink-caret {
@@ -57,9 +57,9 @@
   top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  opacity: 0;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
-  opacity: 0;
 }
 
 #intro.hide {
@@ -74,12 +74,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 1.5rem;
   opacity: 0;
 }
@@ -97,15 +91,114 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+header {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content 1fr max-content max-content max-content max-content;
+      grid-template-columns: -webkit-max-content 1fr -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+      grid-template-columns: max-content 1fr max-content max-content max-content max-content;
+      grid-template-areas: "logo . socials projects about menu";
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+}
+
+header #headerLogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  cursor: default;
+}
+
+header #headerSocials {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: socials;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header #headerProjects {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: projects;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header #headerAbout {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: about;
+  padding: 0.25rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header #headerMenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
+  grid-area: menu;
+  padding: 0.25rem;
+  border: 1px solid #21212d;
+  border-radius: 5px;
+  background-color: #21212d;
+  font-family: "SF Pro Display", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 h2 {
   color: white;
   font-family: "SF Pro Display", sans-serif;
-  font-size: 1.28rem;
+  font-size: 1.25rem;
   font-weight: 500;
   white-space: nowrap;
   cursor: default;
