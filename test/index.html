@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+    <!--"maximum-scale=1.0" prevents the page from loading in zoomed on on mobile devices-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Portfolio</title>
+  </head>
+  <body id="body">
+    <h1 id="intro"></h1>
+    <div class="arrow_box"></div>
+    <div id="menuModal" style="display: none; opacity: 0">
+      <div>Welcome 💖</div>
+      <div>Socials</div>
+      <div>Projects</div>
+      <div>About</div>
+      <div>Contact</div>
+    </div>
+    <div id="wrapContent">
+      <section id="top">
+        <span id="headerLogo">Paskie.dev</span>
+        <div id="headerMenu" onclick="toggleMenu()">Menu&nbsp;&nbsp; <img src="img/arrow.svg" alt="Arrow" /></div>
+      </section>
+      <section id="middle">
+        <h2>I'm a 19 year-old developer from The Netherlands</h2>
+        <h2><span id="lang1">HTML/CSS/JS</span> · <span id="lang2">PHP</span> · <span id="lang3">Java</span> · <span id="lang4">More</span></h2>
+        <h2>Also check out my <span id="lang5">Github</span> and <span id="lang6">Twitter</span></h2>
+      </section>
+      <section id="bottom"></section>
+    </div>
+    <!--<script src="js/intro.js"></script>-->
+    <script src="js/scripts.js"></script>
+    <style>
+      #wrapContent {
+        opacity: 1 !important;
+      }
+    </style>
+  </body>
+</html>

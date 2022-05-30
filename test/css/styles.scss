@@ -1,0 +1,246 @@
+@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("http://fonts.cdnfonts.com/css/sf-mono");
+
+@mixin textDecor($color, $opacity) {
+  text-decoration: underline rgba($color, $opacity) 0.1rem;
+}
+
+$htmlColor: rgba(221, 77, 39, 1);
+$phpColor: rgba(119, 123, 179, 1);
+$javaColor: rgba(248, 152, 28, 1);
+$otherColor: rgba(195, 98, 145, 1);
+$githubColor: rgba(100, 100, 100, 1);
+$twitterColor: rgba(29, 161, 242, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "SF Pro Display", sans-serif;
+} // css reset
+
+:root {
+  width: max-content;
+  margin: auto;
+  background-color: #121212;
+}
+
+.blurBody > *:not(#menuModal) {
+  filter: blur(3px);
+}
+
+#intro {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(2, 2);
+  font-family: "SF Mono", monospace !important;
+  font-size: 1.5rem;
+  color: white;
+  opacity: 1;
+  border-right: 0.1em solid white;
+  white-space: nowrap;
+  user-select: none;
+  animation: blink-caret 0.7s step-end infinite;
+
+  @keyframes blink-caret {
+    0% {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: white;
+    }
+  }
+
+  &.top {
+    top: 0;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation-play-state: paused;
+  }
+
+  &.hide {
+    display: none;
+  }
+}
+
+#menuModal {
+  display: grid;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  grid-template-areas:
+    "Welcome"
+    "Socials"
+    "Projects"
+    "About"
+    "Contact";
+  grid-template-rows: max-content max-content max-content max-content max-content;
+  background-color: black;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: #b7bfc7;
+  text-align: center;
+  align-items: center;
+
+  &::after,
+  &::before {
+    bottom: 100%;
+    left: 90%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  &::after {
+    border-bottom-color: black;
+    border-width: 0.5rem;
+    margin-left: -0.5rem;
+  }
+
+  &::before {
+    border-bottom-color: gray;
+    border-width: 0.5625rem;
+    margin-left: -0.5625rem;
+  }
+
+  div {
+    cursor: pointer;
+    padding: 0.5rem;
+
+    &:first-of-type {
+      border-bottom: 1px solid gray;
+    }
+
+    &:hover:not(:first-of-type) {
+      background-color: #121212;
+      color: white;
+    }
+  }
+}
+
+#wrapContent {
+  display: grid;
+  grid-template-areas: "top" "." "middle" "." "bottom";
+  grid-template-rows: max-content 1fr max-content 1fr max-content;
+  padding: 1.5rem;
+  opacity: 0;
+
+  #top {
+    grid-area: top;
+    display: grid;
+    position: relative;
+    width: 100%;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-areas: "logo . menu";
+
+    #headerLogo {
+      grid-area: logo;
+      align-self: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      cursor: default;
+    }
+
+    #headerMenu {
+      position: relative;
+      grid-area: menu;
+      align-self: center;
+      color: white;
+      background-color: black;
+      padding: 0.5rem;
+      border-radius: 5px;
+      user-select: none;
+      cursor: pointer;
+
+      img {
+        width: 1rem;
+        vertical-align: middle;
+        transition: all 0.25s ease-in-out;
+      }
+    }
+  }
+
+  #middle {
+    grid-area: middle;
+    display: grid;
+    justify-items: center;
+
+    h2 {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+      white-space: nowrap;
+      cursor: default;
+
+      span {
+        font-weight: 600;
+        transition: text-decoration 0.3s ease;
+        cursor: pointer;
+      }
+
+      #lang1 {
+        color: $htmlColor;
+        @include textDecor($htmlColor, 0);
+
+        &:hover {
+          @include textDecor($htmlColor, 1);
+        }
+      }
+
+      #lang2 {
+        color: $phpColor;
+        @include textDecor($phpColor, 0);
+
+        &:hover {
+          @include textDecor($phpColor, 1);
+        }
+      }
+      #lang3 {
+        color: $javaColor;
+        @include textDecor($javaColor, 0);
+
+        &:hover {
+          @include textDecor($javaColor, 1);
+        }
+      }
+      #lang4 {
+        color: $otherColor;
+        @include textDecor($otherColor, 0);
+
+        &:hover {
+          @include textDecor($otherColor, 1);
+        }
+      }
+      #lang5 {
+        color: $githubColor;
+        @include textDecor($githubColor, 0);
+
+        &:hover {
+          @include textDecor($githubColor, 1);
+        }
+      }
+      #lang6 {
+        color: $twitterColor;
+        @include textDecor($twitterColor, 0);
+
+        &:hover {
+          @include textDecor($twitterColor, 1);
+        }
+      }
+    }
+  }
+
+  #bottom {
+    grid-area: bottom;
+    display: grid;
+    justify-items: center;
+  }
+}
