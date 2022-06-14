@@ -1,4 +1,16 @@
-var headerHeight = document.querySelector("header").offsetHeight;
-var aboutHeight = document.querySelector("#about");
-aboutHeight.style.height = "calc(100vh - " + headerHeight + "px)";
-aboutHeight.style.marginTop = headerHeight + "px";
+function stickySidebar() {
+  var sidebar = document.getElementById("sidebar");
+  var sidebarHeight = sidebar.offsetTop - sidebar.offsetHeight;
+
+  if (window.scrollY > sidebarHeight) {
+    sidebar.classList.add("sticky");
+    sidebar.style.top = "155" / 16 + "rem";
+  } else {
+    sidebar.classList.remove("sticky");
+    sidebar.style.top = "50vh";
+  }
+}
+
+window.onscroll = function () {
+  stickySidebar();
+};
