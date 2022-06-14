@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "SF Pro Display", sans-serif;
 }
 
@@ -17,16 +16,14 @@
 }
 
 .blurBody > *:not(#menuModal) {
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
+  filter: blur(3px);
 }
 
 #intro {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%) scale(2, 2);
-          transform: translateX(-50%) translateY(-50%) scale(2, 2);
+  transform: translateX(-50%) translateY(-50%) scale(2, 2);
   font-family: "SF Mono", monospace !important;
   font-size: 1.5rem;
   color: white;
@@ -40,7 +37,6 @@
   -webkit-animation: blink-caret 0.7s step-end infinite;
           animation: blink-caret 0.7s step-end infinite;
 }
-
 @-webkit-keyframes blink-caret {
   0% {
     border-right-color: transparent;
@@ -49,7 +45,6 @@
     border-right-color: white;
   }
 }
-
 @keyframes blink-caret {
   0% {
     border-right-color: transparent;
@@ -58,45 +53,35 @@
     border-right-color: white;
   }
 }
-
 #intro.top {
   top: 0;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   opacity: 0;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
-
 #intro.hide {
   display: none;
 }
 
 #menuModal {
-  display: -ms-grid;
   display: grid;
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-      grid-template-areas: "Welcome" "Socials" "Projects" "About" "Contact";
-  -ms-grid-rows: max-content max-content max-content max-content max-content;
-      grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
-      grid-template-rows: max-content max-content max-content max-content max-content;
+  grid-template-areas: "Welcome" "Socials" "Projects" "About" "Contact";
+  grid-template-rows: -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template-rows: max-content max-content max-content max-content max-content;
   background-color: black;
   border: 1px solid gray;
   border-radius: 5px;
   color: #b7bfc7;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 #menuModal::after, #menuModal::before {
   bottom: 100%;
   left: 90%;
@@ -107,79 +92,57 @@
   position: absolute;
   pointer-events: none;
 }
-
 #menuModal::after {
   border-bottom-color: black;
   border-width: 0.5rem;
   margin-left: -0.5rem;
 }
-
 #menuModal::before {
   border-bottom-color: gray;
   border-width: 0.5625rem;
   margin-left: -0.5625rem;
 }
-
 #menuModal div {
   cursor: pointer;
   padding: 0.5rem;
 }
-
 #menuModal div:first-of-type {
   border-bottom: 1px solid gray;
 }
-
 #menuModal div:hover:not(:first-of-type) {
   background-color: #121212;
   color: white;
 }
 
 #wrapContent {
-  display: -ms-grid;
   display: grid;
-      grid-template-areas: "top" "." "middle" "." "bottom";
-  -ms-grid-rows: max-content 1fr max-content 1fr max-content;
-      grid-template-rows: -webkit-max-content 1fr -webkit-max-content 1fr -webkit-max-content;
-      grid-template-rows: max-content 1fr max-content 1fr max-content;
+  grid-template-areas: "top" "." "middle" "." "bottom";
+  grid-template-rows: -webkit-max-content 1fr -webkit-max-content 1fr -webkit-max-content;
+  grid-template-rows: max-content 1fr max-content 1fr max-content;
   padding: 1.5rem;
   opacity: 0;
 }
-
 #wrapContent #top {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: top;
-  display: -ms-grid;
   display: grid;
   position: relative;
   width: 100%;
-  -ms-grid-columns: max-content 1fr max-content;
-      grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
-      grid-template-columns: max-content 1fr max-content;
-      grid-template-areas: "logo . menu";
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas: "logo . menu";
 }
-
 #wrapContent #top #headerLogo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: logo;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   font-size: 1.5rem;
   font-weight: 600;
   color: white;
   cursor: default;
 }
-
 #wrapContent #top #headerMenu {
   position: relative;
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: menu;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   color: white;
   background-color: black;
   padding: 0.5rem;
@@ -190,23 +153,16 @@
           user-select: none;
   cursor: pointer;
 }
-
 #wrapContent #top #headerMenu img {
   width: 1rem;
   vertical-align: middle;
-  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-
 #wrapContent #middle {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: middle;
-  display: -ms-grid;
   display: grid;
   justify-items: center;
 }
-
 #wrapContent #middle h2 {
   color: white;
   font-size: 1.25rem;
@@ -214,88 +170,69 @@
   white-space: nowrap;
   cursor: default;
 }
-
 #wrapContent #middle h2 span {
   font-weight: 600;
-  -webkit-transition: -webkit-text-decoration 0.3s ease;
   transition: -webkit-text-decoration 0.3s ease;
   transition: text-decoration 0.3s ease;
   transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
   cursor: pointer;
 }
-
 #wrapContent #middle h2 #lang1 {
-  color: #dd4d27;
+  color: rgb(221, 77, 39);
   -webkit-text-decoration: underline rgba(221, 77, 39, 0) 0.1rem;
           text-decoration: underline rgba(221, 77, 39, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang1:hover {
   -webkit-text-decoration: underline #dd4d27 0.1rem;
           text-decoration: underline #dd4d27 0.1rem;
 }
-
 #wrapContent #middle h2 #lang2 {
-  color: #777bb3;
+  color: rgb(119, 123, 179);
   -webkit-text-decoration: underline rgba(119, 123, 179, 0) 0.1rem;
           text-decoration: underline rgba(119, 123, 179, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang2:hover {
   -webkit-text-decoration: underline #777bb3 0.1rem;
           text-decoration: underline #777bb3 0.1rem;
 }
-
 #wrapContent #middle h2 #lang3 {
-  color: #f8981c;
+  color: rgb(248, 152, 28);
   -webkit-text-decoration: underline rgba(248, 152, 28, 0) 0.1rem;
           text-decoration: underline rgba(248, 152, 28, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang3:hover {
   -webkit-text-decoration: underline #f8981c 0.1rem;
           text-decoration: underline #f8981c 0.1rem;
 }
-
 #wrapContent #middle h2 #lang4 {
-  color: #c36291;
+  color: rgb(195, 98, 145);
   -webkit-text-decoration: underline rgba(195, 98, 145, 0) 0.1rem;
           text-decoration: underline rgba(195, 98, 145, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang4:hover {
   -webkit-text-decoration: underline #c36291 0.1rem;
           text-decoration: underline #c36291 0.1rem;
 }
-
 #wrapContent #middle h2 #lang5 {
-  color: #646464;
+  color: rgb(100, 100, 100);
   -webkit-text-decoration: underline rgba(100, 100, 100, 0) 0.1rem;
           text-decoration: underline rgba(100, 100, 100, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang5:hover {
   -webkit-text-decoration: underline #646464 0.1rem;
           text-decoration: underline #646464 0.1rem;
 }
-
 #wrapContent #middle h2 #lang6 {
-  color: #1da1f2;
+  color: rgb(29, 161, 242);
   -webkit-text-decoration: underline rgba(29, 161, 242, 0) 0.1rem;
           text-decoration: underline rgba(29, 161, 242, 0) 0.1rem;
 }
-
 #wrapContent #middle h2 #lang6:hover {
   -webkit-text-decoration: underline #1da1f2 0.1rem;
           text-decoration: underline #1da1f2 0.1rem;
 }
-
 #wrapContent #bottom {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: bottom;
-  display: -ms-grid;
   display: grid;
   justify-items: center;
-}
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
