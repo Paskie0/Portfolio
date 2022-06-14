@@ -1,153 +1,165 @@
 @import url("http://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: white;
+  box-sizing: border-box;
+  color: black;
 }
-
-:root {
-  background-color: #121212;
-  font-family: "SF Pro Display", sans-serif;
-  scroll-behavior: smooth;
-}
-
-:root > body {
-  position: relative;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "header" "main" "footer";
-  -ms-grid-rows: max-content 1fr max-content;
-      grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
-      grid-template-rows: max-content 1fr max-content;
-  width: 80vw;
-  margin: 0 auto;
-}
-
-:root > body > header {
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "logo . twitter github menu";
-  -ms-grid-columns: max-content 1fr max-content max-content max-content;
-      grid-template-columns: -webkit-max-content 1fr -webkit-max-content -webkit-max-content -webkit-max-content;
-      grid-template-columns: max-content 1fr max-content max-content max-content;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
-  place-items: center;
-  padding: 1rem 0;
-}
-
-:root > body > header > div {
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-
-:root > body > header > div > a {
-  color: #e1e1e1;
+* a {
   text-decoration: none;
 }
 
-:root > body > header > div:hover {
-  -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+:root {
+  background: linear-gradient(90deg, #0bbbb5 0%, #a80f54 100%);
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
-
+:root > body {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-rows: max-content 1fr max-content;
+}
+:root > body .sticky {
+  position: fixed;
+}
+:root > body > nav {
+  position: absolute;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: 1rem;
+  display: grid;
+  row-gap: 0.5rem;
+  z-index: 1;
+}
+:root > body > nav > div {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+:root > body > nav > div:nth-of-type(1) > a {
+  background-color: lightcoral;
+}
+:root > body > nav > div:nth-of-type(2) > a {
+  background-color: turquoise;
+}
+:root > body > nav > div:nth-of-type(3) > a {
+  background-color: navajowhite;
+}
+:root > body > nav > div:nth-of-type(4) > a {
+  background-color: pink;
+}
+:root > body > nav > div > svg {
+  place-self: center;
+}
+:root > body > nav > div > a {
+  padding: 0.5rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+:root > body > nav > div > a:hover {
+  background-color: white;
+}
+:root > body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 1;
+}
+:root > body > header > a {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+:root > body > header > a:focus {
+  text-decoration: underline;
+}
 :root > body > main {
-  display: -ms-grid;
   display: grid;
 }
-
 :root > body > main > #about {
   width: 100%;
   height: 100vh;
-  display: -ms-grid;
   display: grid;
-  background-image: url(../img/background.svg);
-  background-position-y: 6.5rem;
+  place-items: center;
+  text-align: left;
 }
-
-:root > body > main > #about > div {
-  place-self: center;
-}
-
-:root > body > main > #about > div > h1 {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-:root > body > main > #about > div > div {
-  text-align: center;
-}
-
 :root > body > main > #projects {
   width: 100%;
   height: 100vh;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[12];
-      grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: (1fr)[12];
-      grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   grid-column-gap: 0.5rem;
   grid-row-gap: 0.5rem;
   margin: 0 auto;
   padding: 1rem 0;
 }
-
 :root > body > main > #projects > .card {
   position: relative;
-  display: -ms-grid;
   display: grid;
   min-width: 2rem;
   min-height: 2rem;
   font-size: 0.6rem;
-  -webkit-box-shadow: 0 0.25rem 1rem black;
-          box-shadow: 0 0.25rem 1rem black;
+  box-shadow: 0 0.25rem 1rem rgb(0, 0, 0);
   cursor: pointer;
 }
-
 :root > body > main > #projects > .card > .cardCover {
   position: absolute;
-  display: -ms-grid;
   display: grid;
   width: 100%;
   height: 100%;
   overflow: hidden;
   place-items: center;
-  background-color: palevioletred;
-  -webkit-transition: height 1s cubic-bezier(0.75, 0.3, 0.3, 0.75);
+  background-color: #121212;
   transition: height 1s cubic-bezier(0.75, 0.3, 0.3, 0.75);
 }
-
 :root > body > main > #projects > .card > .cardContent {
-  display: -ms-grid;
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #600060;
+  background-color: #eeeeee;
 }
-
 :root > body > main > #projects > .card:hover > .cardCover {
   height: 0;
 }
-
 :root > body > main > #projects > .card:first-of-type {
   place-items: center;
   color: white;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   cursor: default;
 }
-
-:root > body > footer {
-  display: -ms-grid;
+:root > body > main > #experience {
+  width: 100%;
+  height: 100vh;
   display: grid;
+  place-items: center;
+  text-align: left;
 }
-/*# sourceMappingURL=styles.css.map */
+:root > body > main > #contact {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: left;
+}
+:root > body > main > #contact > div > ul {
+  list-style: none;
+}
+:root > body > footer {
+  display: grid;
+}/*# sourceMappingURL=styles.css.map */

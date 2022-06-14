@@ -9,27 +9,32 @@
     <script src="https://kit.fontawesome.com/d437031e9c.js" crossorigin="anonymous"></script>
   </head>
   <body>
+    <nav id="sidebar">
+      <div>
+        <i class="fa-solid fa-house fa-xl"></i>
+        <a href="#about">Intro</a>
+      </div>
+      <div>
+        <i class="fa-regular fa-map fa-xl"></i>
+        <a href="#projects">Projects</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-file-lines fa-xl"></i>
+        <a href="#experience">Experience</a>
+      </div>
+      <div>
+        <i class="fa-solid fa-address-card fa-xl"></i>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
     <header style="grid-area: header">
-      <div style="grid-area: logo">
-        <a href=""><h2>Paskie.dev</h2></a>
-      </div>
-      <div style="grid-area: twitter">
-        <a href=""><i class="fa-brands fa-twitter fa-xl"></i></a>
-      </div>
-      <div style="grid-area: github">
-        <a href=""><i class="fa-brands fa-github fa-xl"></i></a>
-      </div>
-      <div style="grid-area: menu">
-        <a href=""><i class="fa-solid fa-bars fa-xl"></i></a>
-      </div>
+      <a href="">Paskie.dev</a>
     </header>
     <main style="grid-area: main">
       <section id="about">
         <div>
-          <h1>Welcome to my Portfolio</h1>
-          <div>
-            <a href="#projects"><i class="fa-solid fa-angle-down fa-xl fa-beat" style="--fa-animation-duration: 2s; --fa-beat-scale: 2"></i></a>
-          </div>
+          <h1>Hi, I'm Pascal👋</h1>
+          <p>A 19 year-old developer from The Netherlands</p>
         </div>
       </section>
       <section id="projects">
@@ -40,7 +45,7 @@
         </div>
         <div class="card" style="grid-area: 7 / 10 / 10 / 13">
           <div class="cardCover">
-            <h1>C#</h1>
+            <h1>TypeScript</h1>
           </div>
           <div class="cardContent">
             <h1>[Projects Here]</h1>
@@ -48,7 +53,7 @@
         </div>
         <div class="card" style="grid-area: 1 / 10 / 7 / 13">
           <div class="cardCover">
-            <h1>C++</h1>
+            <h1>Vue.js</h1>
           </div>
           <div class="cardContent">
             <h1>[Projects Here]</h1>
@@ -119,8 +124,27 @@
           </div>
         </div>
       </section>
+      <section id="experience"></section>
+      <section id="contact">
+        <div>
+          <ul>
+            <li>
+              <a href="mailto:Pascaldewit@Outlook.com">
+                <i class="fa-solid fa-envelope fa-xl"></i>
+                <span>Mail</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.github.com/Paskie0">
+                <i class="fa-brands fa-github fa-xl"></i>
+                <span>Github</span>
+              </a>
+            </li>
+              </li>
+        </div>
+      </section>
     </main>
     <footer style="grid-area: footer"></footer>
-    <script src="js.js"></script>
+    <script src="js/js.js"></script>
   </body>
 </html>
