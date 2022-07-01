@@ -61,7 +61,6 @@ include_once 'connect.php'
       echo "<td>" . $row["infix"] . "</td>";
       echo "<td>" . $row["last_name"] . "</td>";
       echo "<td>";
-      echo "<button id='editButton'>Edit</button>";
       echo "<form action='deleteStudent.php?id=" . $row["student_number"] . "' method='POST' target='addStudentRedirect' onclick='reload()'>";
       echo "<button id='deleteButton' >Delete</button>";
       echo "</form></td></tr>";
