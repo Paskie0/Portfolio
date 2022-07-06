@@ -1,5 +1,46 @@
-@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* @mixin gridCard() {
+  position: relative;
+  display: grid;
+  min-width: 2rem;
+  min-height: 2rem;
+  max-width: 19rem;
+  max-height: 19rem;
+  font-size: 0.6rem;
+  box-shadow: $box-shadow;
+  cursor: pointer;
+
+  > .cardCover {
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    place-items: center;
+    background-color: #121212;
+    transition: height 1s cubic-bezier(0.75, 0.3, 0.3, 0.75);
+  }
+
+  > .cardContent {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: #eeeeee;
+  }
+
+  &:hover {
+    > .cardCover {
+      height: 0;
+    }
+  }
+
+  &:first-of-type {
+    place-items: center;
+    color: white;
+    box-shadow: none;
+    cursor: default;
+  }
+} */
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +53,7 @@
 
 :root {
   background: linear-gradient(90deg, #0bbbb5 0%, #a80f54 100%);
+  background-repeat: no-repeat;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 }
@@ -102,46 +144,37 @@
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(12, 1fr);
-  grid-column-gap: 0.5rem;
-  grid-row-gap: 0.5rem;
-  margin: 0 auto;
+  place-items: center;
+  row-gap: 0.5rem;
   padding: 1rem 0;
+  /*         > .card {
+    @include gridCard();
+  } */
 }
-:root > body > main > #projects > .card {
-  position: relative;
+:root > body > main > #projects > #projectsWrapper {
   display: grid;
-  min-width: 2rem;
-  min-height: 2rem;
-  font-size: 0.6rem;
-  box-shadow: 0 0.25rem 1rem rgb(0, 0, 0);
-  cursor: pointer;
+  row-gap: 0.5rem;
 }
-:root > body > main > #projects > .card > .cardCover {
-  position: absolute;
-  display: grid;
+:root > body > main > #projects > #projectsWrapper div {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
-  place-items: center;
-  background-color: #121212;
-  transition: height 1s cubic-bezier(0.75, 0.3, 0.3, 0.75);
-}
-:root > body > main > #projects > .card > .cardContent {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem;
   display: grid;
   place-items: center;
-  text-align: center;
-  background-color: #eeeeee;
-}
-:root > body > main > #projects > .card:hover > .cardCover {
-  height: 0;
-}
-:root > body > main > #projects > .card:first-of-type {
-  place-items: center;
-  color: white;
-  box-shadow: none;
-  cursor: default;
+  grid-template-areas: "icon title gap unfold";
+  grid-template-columns: -webkit-max-content -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content max-content 1fr max-content;
+  font-weight: 600;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+          backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  cursor: pointer;
 }
 :root > body > main > #experience {
   width: 100%;
@@ -162,4 +195,10 @@
 }
 :root > body > footer {
   display: grid;
+}
+
+@media screen and (max-width: 700px) {
+  #sidebar {
+    display: none !important;
+  }
 }/*# sourceMappingURL=styles.css.map */

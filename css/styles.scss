@@ -1,14 +1,15 @@
-@import url("http://fonts.cdnfonts.com/css/sf-pro-display");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 $box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 1);
 $border-radius: 0.25rem;
 
-@mixin gridCard() {
+/* @mixin gridCard() {
   position: relative;
   display: grid;
   min-width: 2rem;
   min-height: 2rem;
+  max-width: 19rem;
+  max-height: 19rem;
   font-size: 0.6rem;
   box-shadow: $box-shadow;
   cursor: pointer;
@@ -43,7 +44,7 @@ $border-radius: 0.25rem;
     box-shadow: none;
     cursor: default;
   }
-}
+} */
 
 * {
   margin: 0;
@@ -58,6 +59,7 @@ $border-radius: 0.25rem;
 
 :root {
   background: linear-gradient(90deg, #0bbbb5 0%, #a80f54 100%);
+  background-repeat: no-repeat;
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
 
@@ -160,16 +162,38 @@ $border-radius: 0.25rem;
         width: 100%;
         height: 100vh;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(12, 1fr);
-        grid-column-gap: 0.5rem;
-        grid-row-gap: 0.5rem;
-        margin: 0 auto;
+        place-items: center;
+        row-gap: 0.5rem;
+        //grid-template-columns: repeat(12, 1fr);
+        //grid-template-rows: repeat(12, 1fr);
+        //grid-column-gap: 0.5rem;
+        //grid-row-gap: 0.5rem;
         padding: 1rem 0;
 
-        > .card {
-          @include gridCard();
+        > #projectsWrapper {
+          display: grid;
+          row-gap: 0.5rem;
+
+          div {
+            width: 100%;
+            height: fit-content;
+            padding: 0.5rem;
+            display: grid;
+            place-items: center;
+            grid-template-areas: "icon title gap unfold";
+            grid-template-columns: max-content max-content 1fr max-content;
+            font-weight: 600;
+            column-gap: 0.5rem;
+            backdrop-filter: blur(16px) saturate(180%);
+            background-color: rgba(17, 25, 40, 0.75);
+            border-radius: $border-radius;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            cursor: pointer;
+          }
         }
+        /*         > .card {
+          @include gridCard();
+        } */
       }
 
       > #experience {
@@ -196,5 +220,11 @@ $border-radius: 0.25rem;
     > footer {
       display: grid;
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #sidebar {
+    display: none !important;
   }
 }
