@@ -1,164 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="https://kit.fontawesome.com/d437031e9c.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <title>Pascal's Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
   </head>
-  <body>
-    <nav id="sidebar">
-      <div>
-        <i class="fa-solid fa-house fa-xl"></i>
-        <a href="#about">Intro</a>
+  <body id="top">
+    <section id="intro">
+      <div class="intro-overlay"></div>
+      <div class="intro-content">
+        <div class="row">
+          <div class="col-twelve">
+            <h5>Hi, 👋</h5>
+            <h1>I'm Pascal De Wit</h1>
+            <p class="intro-position">
+              <span style="font-weight: 600">Front-end Developer</span>
+            </p>
+            <a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <i class="fa-regular fa-map fa-xl"></i>
-        <a href="#projects">Projects</a>
+      <ul class="intro-social">
+        <li>
+          <a href="https://www.linkedin.com/in/paskie/"><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href="https://github.com/Paskie0"><i class="fa fa-github"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/PaskieCS"><i class="fa fa-twitter"></i></a>
+        </li>
+      </ul>
+    </section>
+    <section id="about">
+      <div class="row section-intro">
+        <div class="col-twelve">
+          <h5>About</h5>
+          <h1>Let me introduce myself.</h1>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
       </div>
-      <div>
-        <i class="fa-solid fa-file-lines fa-xl"></i>
-        <a href="#experience">Experience</a>
-      </div>
-      <div>
-        <i class="fa-solid fa-address-card fa-xl"></i>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-    <header style="grid-area: header">
-      <a href="">Paskie.dev</a>
-    </header>
-    <main style="grid-area: main">
-      <section id="about">
-        <div>
-          <h1>Hi, I'm Pascal👋</h1>
-          <p>A 19 year-old developer from The Netherlands</p>
-        </div>
-      </section>
-<!--       <section id="projects">
-        <div class="card" style="grid-area: 4 / 1 / 7 / 7">
-          <div>
-            <h1>Projects</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 7 / 10 / 10 / 13">
-          <div class="cardCover">
-            <h1>TypeScript</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 1 / 10 / 7 / 13">
-          <div class="cardCover">
-            <h1>Vue.js</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 7 / 7 / 13 / 10">
-          <div class="cardCover">
-            <h1>C</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 4 / 7 / 7 / 10">
-          <div class="cardCover">
-            <h1>React</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 1 / 4 / 4 / 10">
-          <div class="cardCover">
-            <h1>Java</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 1 / 1 / 4 / 4">
-          <div class="cardCover">
-            <h1>Node.js</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 10 / 1 / 13 / 7">
-          <div class="cardCover">
-            <h1>SCSS</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 7 / 4 / 10 / 7">
-          <div class="cardCover">
-            <h1>Go</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 7 / 1 / 10 / 4">
-          <div class="cardCover">
-            <h1>Rust</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-        <div class="card" style="grid-area: 10 / 10 / 13 / 13">
-          <div class="cardCover">
-            <h1>Markdown</h1>
-          </div>
-          <div class="cardContent">
-            <h1>[Projects Here]</h1>
-          </div>
-        </div>
-      </section> -->
-      <section id="projects">
-      <div id="projectsWrapper">
-        <div id="projectsTitle">
-          <i class="fa-solid fa-grip-lines fa-xl"></i>
-          <p>An overview of all of my projects</p>
-        </div>
-        <a href="./languages/js/h06/index.html"><div>
-          <span>Memory Game</span>
-        </div></a>
-        <a href="./tailwind/src/index.html"><div>
-          <span>Tailwand website (unfinished)</span>
-        </div></a>
-      </div>
-      </section>
-      <section id="experience"></section>
-      <section id="contact">
-        <div>
-          <ul>
+      <div class="row about-content">
+        <div class="col-six tab-full">
+          <h3>Profile</h3>
+          <ul class="info-list">
             <li>
-              <a href="mailto:Pascaldewit@Outlook.com">
-                <i class="fa-solid fa-envelope fa-xl"></i>
-                <span>Mail</span>
-              </a>
+              <strong>Full-name</strong>
+              <span>Pascal Alexander De Wit</span>
             </li>
             <li>
-              <a href="https://www.github.com/Paskie0">
-                <i class="fa-brands fa-github fa-xl"></i>
-                <span>Github</span>
-              </a>
+              <strong>Date of Birth</strong>
+              <span>July 2, 2002</span>
             </li>
-              </li>
+            <li>
+              <strong>Email</strong>
+              <span>Pascaldewit@outlook.com</span>
+            </li>
+          </ul>
         </div>
-      </section>
-    </main>
-    <footer style="grid-area: footer"></footer>
-    <script src="js/js.js"></script>
+        <div class="col-six tab-full">
+          <h3>Skills</h3>
+          <ul class="skill-bars">
+            <li>
+              <div class="progress percent90"><span>90%</span></div>
+              <strong>HTML5</strong>
+            </li>
+            <li>
+              <div class="progress percent85"><span>85%</span></div>
+              <strong>CSS/SCSS</strong>
+            </li>
+            <li>
+              <div class="progress percent70"><span>70%</span></div>
+              <strong>JavaScript/TypeScript</strong>
+            </li>
+            <li>
+              <div class="progress percent95"><span>95%</span></div>
+              <strong>PHP</strong>
+            </li>
+            <li>
+              <div class="progress percent75"><span>75%</span></div>
+              <strong>Java</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="row button-section">
+        <div class="col-twelve">
+          <a href="#" title="Download CV" class="button button-primary">Download CV</a>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

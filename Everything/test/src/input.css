@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  outline: 1px solid black;
+}
+
+.header-layout {
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-areas: "title .  github linkedin";
+  grid-template-columns: max-content 1fr max-content max-content;
+}
+
+.sidebar-layout {
+  grid-template-areas: "about" "projects" "experience" "contact";
+  grid-template-rows: max-content max-content max-content max-content;
+  row-gap: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.sidebar-item {
+  background-color: red;
+}
+
+.transparent {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+}

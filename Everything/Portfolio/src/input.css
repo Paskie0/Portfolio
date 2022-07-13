@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  * {
+    outline: 1px solid black;
+  }
+
+  :root {
+    scroll-behavior: smooth;
+    background-color: hsl(222, 47%, 11%);
+    color: hsl(220, 14%, 96%);
+  }
+
+  .header {
+    grid-template-areas: "logo . linkedin github";
+    grid-template-columns: max-content 1fr max-content max-content;
+    column-gap: 1rem;
+  }
+
+  .sidebar {
+    top: 50%;
+    transform: translateY(-50%);
+    grid-template-areas: "home" "about" "projects" "contact";
+    grid-template-columns: max-content max-content max-content max-content;
+    row-gap: 0.5rem;
+  }
+
+  .sidebar-item {
+    display: grid;
+    grid-template-areas: "icon";
+    grid-template-columns: 1.5rem;
+    column-gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  .sidebar-item-small {
+    display: grid;
+    grid-template-areas: "icon title";
+    grid-template-columns: 2.5rem 1fr;
+    column-gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+    border-radius: 0.25rem;
+  }
+
+  .sidebar-item > svg {
+    place-self: center;
+  }
+
+  .home {
+    grid-template-areas: "intro" "languages";
+    grid-template-rows: max-content max-content;
+  }
+
+  .card {
+    grid-template-areas: "name" "html css js react php java";
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .transparent {
+    backdrop-filter: blur(100px) saturate(200%);
+    -webkit-backdrop-filter: blur(100px) saturate(200%);
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  .font-sfpro {
+    font-family: "SF Pro Display", sans-serif;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/d437031e9c.js" crossorigin="anonymous"></script>
+    <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+  </head>
+  <body class="max-w-screen-md h-[400vh] mx-auto">
+    <header class="sticky top-2 mx-2 p-2 grid place-items-center header">
+      <div style="grid-area: logo"><span class="text-2xl font-semibold">Paskie.dev</span></div>
+      <div style="grid-area: github">
+        <a href="https://github.com/Paskie0"><i class="fa-brands fa-github-square fa-2xl"></i></a>
+      </div>
+      <div style="grid-area: linkedin">
+        <a href="https://www.linkedin.com/in/Paskie/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+      </div>
+    </header>
+    <nav class="grid fixed p-2 ml-2 sidebar">
+      <a href="#home" style="grid-area: home">
+        <div class="sidebar-item sm:sidebar-item-small bg-orange-400">
+          <i class="fa-solid fa-house-chimney fa-xl"></i>
+          <span class="text-left hidden sm:inline">Home</span>
+        </div>
+      </a>
+      <a href="#about" style="grid-area: about">
+        <div class="sidebar-item sm:sidebar-item-small bg-teal-600">
+          <i class="fa-solid fa-user fa-xl"></i>
+          <span class="text-left hidden sm:inline">About</span>
+        </div>
+      </a>
+      <a href="#projects" style="grid-area: projects">
+        <div class="sidebar-item sm:sidebar-item-small bg-violet-700">
+          <i class="fa-solid fa-layer-group fa-xl"></i>
+          <span class="text-left hidden sm:inline">Projects</span>
+        </div>
+      </a>
+      <a href="#contact" style="grid-area: contact">
+        <div class="sidebar-item sm:sidebar-item-small bg-pink-900">
+          <i class="fa-solid fa-address-book fa-xl"></i>
+          <span class="text-left hidden sm:inline">Contact</span>
+        </div>
+      </a>
+    </nav>
+    <main class="w-[calc(100%-9rem)] sm:w-[calc(100%-18.5rem)] mx-auto">
+      <section id="home" class="w-full h-screen grid place-items-center home">
+        <div id="intro" class="text-center" style="grid-area: intro">
+          <p class="text-2xl font-sfpro font-semibold">Hey, I'm Pascal De Wit 👋</p>
+          <p class="text-base font-sfpro font-normal text-neutral-400">A 20 year-old software developer from The Netherlands</p>
+        </div>
+        <div class="grid card place-items-center w-[calc(100%-2rem)] aspect-[1/0.8] rounded bg-neutral-800">
+          <span style="grid-area: name">Pascal De Wit</span>
+          <span style="grid-area: html" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+          <span style="grid-area: css" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+          <span style="grid-area: js" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+          <span style="grid-area: react" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+          <span style="grid-area: php" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+          <span style="grid-area: java" class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded text-xs font-medium bg-blue-100 text-blue-800">Badge</span>
+        </div>
+      </section>
+      <section id="about" class="w-full h-screen grid place-items-center">
+        <div class="text-center">
+          <p class="text-3xl font-sfpro font-medium">Hey, I'm Pascal De Wit 👋</p>
+          <p class="text-xl font-sfpro font-normal">A 20 year-old software developer from The Netherlands</p>
+        </div>
+      </section>
+      <section id="projects" class="w-full h-screen grid place-items-center">
+        <div class="text-center">
+          <p class="text-3xl font-sfpro font-medium">Hey, I'm Pascal De Wit 👋</p>
+          <p class="text-xl font-sfpro font-normal">A 20 year-old software developer from The Netherlands</p>
+        </div>
+      </section>
+      <section id="contact" class="w-full h-screen grid place-items-center">
+        <div class="text-center">
+          <p class="text-3xl font-sfpro font-medium">Hey, I'm Pascal De Wit 👋</p>
+          <p class="text-xl font-sfpro font-normal">A 20 year-old software developer from The Netherlands</p>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+    <script src="../node_modules/preline/dist/hs-ui.bundle.js"></script>
+  </body>
+</html>
