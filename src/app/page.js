@@ -4,6 +4,7 @@ import {Button} from "@/components/ui/button";
 import {Link} from "next-view-transitions";
 import Image from "next/image";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {MoveUpRight} from "lucide-react";
 
 export default function Home() {
   return (
@@ -112,66 +113,73 @@ export default function Home() {
           </Button>
         </div>
       </div>
-      <div className="grid gap-4">
-        <h1 className="text-left text-2xl font-medium">Recent projects:</h1>
-        <div className="grid grid-cols-4 grid-rows-4 gap-1 bg-zinc-500 [&:has(:hover)_>_div:not(:hover)]:opacity-50">
-          <Card className="rounded-none border-none col-span-2 row-span-2">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none col-start-3 col-span-2">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none row-start-3 row-span-2">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none row-start-3 row-span-2">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-          <Card className="rounded-none border-none col-start-3 col-span-2 row-start-3 row-span-2">
-            <CardHeader>
-              <CardTitle>Card Title</CardTitle>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">View Project</Button>
-            </CardFooter>
-          </Card>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-[1fr_1fr_auto_1fr_1fr] overflow-hidden [&:has(:hover)_>_div:not(:hover)]:opacity-50">
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Project</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Image</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Image</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Project</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <div className="h-16 border"></div>
+        <div className="h-16 border"></div>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Project</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Image</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Image</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
+        <Card className="h-64 rounded-none transition-all [&:hover_svg]:opacity-100 [&:hover_svg]:translate-x-1 [&:hover_svg]:-translate-y-1">
+          <CardHeader className="flex-row justify-between items-center">
+            <CardTitle>Project</CardTitle>
+            <Link href="/" className="!mt-0">
+              <MoveUpRight className="justify-self-end h-[1.2rem] w-[1.2rem] opacity-50 transition-all" />
+            </Link>
+          </CardHeader>
+        </Card>
       </div>
     </main>
   );
