@@ -70,7 +70,40 @@
   * {
     @apply border-border;
   }
+
+  html.dark {
+    --inset: 0 0 100% 0;
+  }
+
+  html.light {
+    --inset: 100% 0 0 0;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(var(--inset));
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.8s;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+::view-transition-new(root) {
+  animation-name: reveal;
 }
